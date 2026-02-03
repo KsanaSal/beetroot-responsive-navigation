@@ -1,3 +1,17 @@
+:root {
+    --color-white: #ffffff;
+    --purple-dark: #392C72;
+    --purple-light: #9E8CFC;
+    --gray-dark: #4F4F4F;
+    --gray-middle: #828282;
+    --gray-light: #BDBDBD;
+    --blue-dark: #283046;
+    --blue-darken: #161D31;
+    --red:#EA5455;
+    --yellow:#F2C94C;
+    --green:#6FCF97;
+}
+
 *,
 *::before,
 *::after {
@@ -28,6 +42,7 @@ img {
 a {
     display: inline-block;
     text-decoration: none;
+    color: currentColor;
 }
 
 address {
@@ -42,4 +57,127 @@ ul {
 
 button {
     cursor: pointer;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--gray-dark);
+    background-color: var(--color-white);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.container {
+    width: 1220px;
+    padding: 30px 0;
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 1170px;
+    background-color: var(--color-white);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 20px;
+    border-radius: 10px;
+}
+
+.header__panel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header_panel-icon{
+    width: 26px;
+    height: 26px;
+    color: var(--gray-dark);
+}
+
+.header_panel-icon:hover{
+    color: var(--purple-light);
+}
+
+.header__settings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.header__language{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__theme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon{
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
+}
+
+.icon:hover{
+    color: var(--purple-light);
+}
+
+.wrapper{
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background-color: unset;
+}
+
+.header__avatar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header__circle{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--color-white);
+    background-color: var(--green);
+}
+
+.img-bg{
+    width: 1220px;
+    height: 676px;
+    margin-top: 68px;
+}
+
+.sidebar {
+    width: 220px;
 }
