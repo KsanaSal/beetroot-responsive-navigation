@@ -105,155 +105,215 @@
                 />
             </div>
             <aside class="sidebar">
-                <div>
-                    <svg>
-                        <use href=""></use>
-                    </svg>
-                    <svg>
-                        <use href=""></use>
-                    </svg>
+                <div class="sidebar__header">
+                    <a href="#" class="sidebar__logo">
+                        <svg class="icon-logo">
+                            <use href="./images/icon.svg#icon-logo"></use>
+                        </svg>
+                        <h1 class="sidebar__title">LightBoard</h1>
+                    </a>
+                    <div class="sidebar__arrow">
+                        <button class="sidebar__btn">
+                            <svg class="icon-arrow">
+                                <use
+                                    href="./images/icon.svg#icon-arrow-right"
+                                ></use>
+                            </svg>
+                        </button>
+                        <button class="sidebar__btn">
+                            <svg class="icon-arrow">
+                                <use
+                                    href="./images/icon.svg#icon-arrow-left"
+                                ></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-                <a href="#">
-                    <svg>
-                        <use href=""></use>
-                    </svg>
-                    <h1>LightBoard</h1>
-                </a>
-                <div>
-                    <svg>
-                        <use href=""></use>
-                    </svg>
-                    <p></p>
+                <div class="sidebar__categories">
+                    <div class="sidebar__apps-item">
+                        <svg class="icon icon-apps">
+                            <use href="./images/icon.svg#icon-dashboard"></use>
+                        </svg>
+                        <h3 class="sidebar__text">Dashboard</h3>
+                    </div>
+                    <ul class="sidebar__apps">
+                        <h2 class="sidebar__apps-title">Apps</h2>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <div class="sidebar__count-wrapper">
+                                    <svg class="icon icon-apps">
+                                        <use
+                                            href="./images/icon.svg#icon-email"
+                                        ></use>
+                                    </svg>
+                                    <span
+                                        class="sidebar__count sidebar__count-green"
+                                        >10</span
+                                    >
+                                </div>
+                                <span class="sidebar__text">Email</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <div class="sidebar__count-wrapper">
+                                    <svg class="icon icon-apps">
+                                        <use
+                                            href="./images/icon.svg#icon-bubble"
+                                        ></use>
+                                    </svg>
+                                    <span
+                                        class="sidebar__count sidebar__count-red"
+                                        >10</span
+                                    >
+                                </div>
+                                <span class="sidebar__text">Chats</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <div class="sidebar__count-wrapper">
+                                    <svg class="icon icon-apps">
+                                        <use
+                                            href="./images/icon.svg#icon-calendar"
+                                        ></use>
+                                    </svg>
+                                    <span
+                                        class="sidebar__count sidebar__count-yellow"
+                                        >5</span
+                                    >
+                                </div>
+                                <span class="sidebar__text">Calendar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-news"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">News</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-study"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">Knowledge</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-stack"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">File manager</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-location"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">Leaflet Maps</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="sidebar__apps">
+                        <h2 class="sidebar__apps-title">Auth pages</h2>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-profile"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-lock"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">Permissions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-logout"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="sidebar__apps">
+                        <h2 class="sidebar__apps-title">User Interface</h2>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-eye"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">Feather</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-wallet"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">Ecommerce</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-lab"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">Components</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-page"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">Pages</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sidebar__apps-item" href="#">
+                                <svg class="icon icon-apps">
+                                    <use
+                                        href="./images/icon.svg#icon-pen"
+                                    ></use>
+                                </svg>
+                                <span class="sidebar__text">Editor</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <ul>
-                    <h2>Apps</h2>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Email</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Chats</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Calendar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>News</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Knowledge</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>File manager</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Leaflet Maps</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <h2>Auth pages</h2>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Profile</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Permissions</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Log Out</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <h2>User Interface</h2>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Feather</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Ecommerce</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Components</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Pages</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <svg>
-                                <use href=""></use>
-                            </svg>
-                            <span>Editor</span>
-                        </a>
-                    </li>
-                </ul>
             </aside>
         </main>
     </body>
