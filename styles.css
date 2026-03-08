@@ -69,15 +69,15 @@ body {
     font-weight: 400;
     color: var(--gray-dark);
     background-color: var(--color-white);
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    max-width: 1440px;
 }
 
 main {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    max-width: 1440px;
 }
 
 /* Component styles */
@@ -185,23 +185,33 @@ main {
 
 /* Sidebar styles */
 .sidebar {
-    width: 220px;
+    width: 86px;
+    transition: width 0.3s;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 40px;
     padding: 30px 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.sidebar.expanded {
+    width: 220px;
 }
 
 .sidebar__header {
     display: flex;
     align-items: center;
+    gap: 16px;
+    transition: gap 0.3s;
+    padding-left: 27px;
+    z-index: 2;
+}
+.sidebar.expanded .sidebar__header {
     gap: 30px;
+    padding-left: 15px;
 }
 
-.sidebar__arrow {
-    display: flex;
-}
 .sidebar__btn {
     width: 24px;
     height: 24px;
@@ -216,6 +226,7 @@ main {
     width: 20px;
     height: 20px;
     fill: currentColor;
+    transition: transform 0.3s ease;
 }
 
 .sidebar__logo {
@@ -233,6 +244,12 @@ main {
     font-size: 18px;
     line-height: 1.25;
     color: var(--purple-dark);
+    display: none;
+    transition: display 0.3s;
+}
+
+.sidebar.expanded .sidebar__title {
+    display: block;
 }
 
 .sidebar__categories {
@@ -240,6 +257,10 @@ main {
     flex-direction: column;
     gap: 30px;
     width: 100%;
+    align-items: center;
+}
+.sidebar.expanded .sidebar__categories {
+    align-items: start;
 }
 .sidebar__apps-item {
     display: flex;
@@ -281,6 +302,11 @@ main {
     font-size: 16px;
     line-height: 1.25;
     font-weight: 400;
+    display: none;
+    transition: display 0.3s;
+}
+.sidebar.expanded .sidebar__text {
+    display: block;
 }
 .sidebar__apps-item:hover {
     background-color: var(--purple-light);
@@ -295,7 +321,12 @@ main {
 .sidebar__apps {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
+.sidebar.expanded .sidebar__apps {
+    align-items: start;
+}
+
 .sidebar__apps-title {
     color: var(--gray-middle);
     font-size: 16px;
@@ -303,4 +334,48 @@ main {
     font-weight: 400;
     text-transform: uppercase;
     margin-left: 15px;
+
+    /* При згорнутому sidebar робимо "скелетон" */
+    /* position: relative; */
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.sidebar:not(.expanded) .sidebar__apps-title {
+    /* Приховуємо текст */
+    color: transparent;
+    margin-left: 0;
+    display: flex;
+    justify-content: center; /* центрування по горизонталі */
+    align-items: center;
+
+    /* додаємо лінію */
+    position: relative;
+}
+
+.sidebar:not(.expanded) .sidebar__apps-title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
+    width: 8px;
+    height: 4px;
+    background: var(--gray-middle);
+    border-radius: 4px;
+
+    box-shadow: 30px 0 0 0 var(--gray-middle); /* права 8px */
+}
+.sidebar:not(.expanded) .sidebar__apps-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px; /* 8px + 4px gap */
+
+    width: 14px;
+    height: 4px;
+    background: var(--gray-middle);
+    border-radius: 4px;
 }
